@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.StageViewController">
+   <children>
+      <TabPane fx:id="stagePane" prefHeight="500.0" prefWidth="610.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Stage">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="471.0" prefWidth="625.0">
+                     <children>
+                        <ImageView fitHeight="437.0" fitWidth="613.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@stg0.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="128.0" layoutY="285.0" mnemonicParsing="false" onAction="#ajouttab" text="Ajouter">
+                           <font>
+                              <Font size="20.0" />
+                           </font></Button>
+                        <Button layoutX="242.0" layoutY="285.0" mnemonicParsing="false" onAction="#recherchtab" text="Rechercher">
+                           <font>
+                              <Font size="20.0" />
+                           </font></Button>
+                        <Button layoutX="401.0" layoutY="285.0" mnemonicParsing="false" onAction="#edittab" text="Editer">
+                           <font>
+                              <Font size="20.0" />
+                           </font></Button>
+                        <AnchorPane prefHeight="28.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Separator layoutX="27.0" layoutY="13.0" prefHeight="0.0" prefWidth="518.0" />
+                              <Label layoutX="545.0" layoutY="5.0" text="©By AbedAFRIAD" textFill="#cdcdcd" />
+                           </children>
+                        </AnchorPane>
+                        <ToolBar prefHeight="35.0" prefWidth="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <items>
+                              <Button mnemonicParsing="false" onAction="#mainmenu" text="Main Menu" />
+                              <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="18.0" />
+                              <Button mnemonicParsing="false" onAction="#stagiaire" text="Stagiaire" />
+                              <Button mnemonicParsing="false" onAction="#encadrant" text="Encadrant" />
+                              <Button mnemonicParsing="false" onAction="#departement" text="Departement" />
+                              <Button mnemonicParsing="false" onAction="#tache" text="Tâche" />
+                              <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="36.0" />
+                           </items>
+                        </ToolBar>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Ajouter Stage">
+               <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="121.0" prefWidth="0.0">
+                     <children>
+                        <ImageView fitHeight="437.0" fitWidth="610.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@stg1.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="42.0" layoutY="147.0" text="Nom Stage" />
+                        <TextField fx:id="nom" layoutX="131.0" layoutY="143.0" promptText="Nom de Stage" />
+                        <Label layoutX="42.0" layoutY="193.0" text="Date Debut" />
+                        <DatePicker fx:id="dateDeb" layoutX="131.0" layoutY="189.0" prefHeight="25.0" prefWidth="148.0" promptText="JJ/MM/AAAA" />
+                        <Label layoutX="42.0" layoutY="238.0" text="Date Fin" />
+                        <DatePicker fx:id="dateFin" layoutX="131.0" layoutY="234.0" prefHeight="25.0" prefWidth="148.0" promptText="JJ/MM/AAAA" />
+                        <Label layoutX="316.0" layoutY="147.0" text="Encadrant" />
+                        <ComboBox fx:id="encadrantComboBox" layoutX="412.0" layoutY="143.0" prefWidth="150.0" promptText="Select Encadrant" />
+                        <Label layoutX="316.0" layoutY="193.0" text="Departement" />
+                        <ComboBox fx:id="departementComboBox" layoutX="412.0" layoutY="189.0" prefWidth="150.0" promptText="Select Departement" />
+                        <Button layoutX="432.0" layoutY="287.0" mnemonicParsing="false" onAction="#ajout" text="Ajouter" />
+                        <Label layoutX="42.0" layoutY="282.0" text="Budget" />
+                        <TextField fx:id="budget" layoutX="131.0" layoutY="278.0" promptText="Budget" />
+                        <ToolBar prefHeight="35.0" prefWidth="635.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <items>
+                              <Button mnemonicParsing="false" onAction="#mainmenu" text="Main Menu" />
+                              <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="0.0" />
+                              <Button mnemonicParsing="false" onAction="#stagiaire" text="Stagiaire" />
+                              <Button mnemonicParsing="false" onAction="#encadrant" text="Encadrant" />
+                              <Button mnemonicParsing="false" onAction="#departement" text="Departement" />
+                              <Button mnemonicParsing="false" onAction="#tache" text="Tâche" />
+                              <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="0.0" />
+                              <Button mnemonicParsing="false" onAction="#menutab" text="Stage Menu" />
+                              <Button mnemonicParsing="false" onAction="#recherchtab" text="Rechercher" />
+                              <Button mnemonicParsing="false" onAction="#edittab" text="Editer" />
+                              <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="36.0" />
+                           </items>
+                        </ToolBar>
+                        <Separator layoutX="294.0" layoutY="128.0" orientation="VERTICAL" prefHeight="241.0" prefWidth="22.0" />
+                        <AnchorPane layoutY="424.0" prefHeight="28.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Separator layoutX="27.0" layoutY="13.0" prefHeight="0.0" prefWidth="518.0" />
+                              <Label layoutX="545.0" layoutY="5.0" text="©By AbedAFRIAD" textFill="#cdcdcd" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+          <Tab text="Recherche Stage">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="436.0" fitWidth="610.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@stg2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="39.0" layoutY="131.0" text="Nom" />
+                        <TextField fx:id="nomRech" layoutX="101.0" layoutY="127.0" prefHeight="25.0" prefWidth="100.0" />
+                        <Label layoutX="218.0" layoutY="131.0" text="Budget Max" />
+                        <TextField fx:id="budgetMax" layoutX="295.0" layoutY="127.0" prefHeight="25.0" prefWidth="100.0" />
+                        <Label layoutX="409.0" layoutY="131.0" text="Budget Min" />
+                        <TextField fx:id="budgetMin" layoutX="480.0" layoutY="127.0" prefWidth="100.0" />
+                        <TableView fx:id="stageTableView" layoutX="48.0" layoutY="194.0" onMouseClicked="#details" prefHeight="100.0" prefWidth="523.0" />
+                        <Button layoutX="442.0" layoutY="162.0" mnemonicParsing="false" onAction="#recherch" text="Rechercher" />
+                        <Label layoutX="39.0" layoutY="166.0" text="Encadrant" />
+                        <ComboBox fx:id="encadrantComboBoxRech" layoutX="101.0" layoutY="162.0" prefHeight="25.0" prefWidth="99.0" />
+                        <Label layoutX="218.0" layoutY="166.0" text="Departement" />
+                        <ComboBox fx:id="departementComboBoxRech" layoutX="295.0" layoutY="162.0" prefHeight="25.0" prefWidth="99.0" />
+                        <ToolBar prefHeight="35.0" prefWidth="635.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <items>
+                              <Button mnemonicParsing="false" onAction="#mainmenu" text="Main Menu" />
+                              <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="0.0" />
+                              <Button mnemonicParsing="false" onAction="#stagiaire" text="Stagiaire" />
+                              <Button mnemonicParsing="false" onAction="#encadrant" text="Encadrant" />
+                              <Button mnemonicParsing="false" onAction="#departement" text="Departement" />
+                              <Button mnemonicParsing="false" onAction="#tache" text="Tâche" />
+                              <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="0.0" />
+                              <Button mnemonicParsing="false" onAction="#menutab" text="Stage Menu" />
+                              <Button mnemonicParsing="false" onAction="#ajouttab" text="Ajouter" />
+                              <Button mnemonicParsing="false" onAction="#edittab" text="Editer" />
+                              <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="36.0" />
+                           </items>
+                        </ToolBar>
+                        <TableView fx:id="tacheTableView" layoutX="45.0" layoutY="313.0" prefHeight="77.0" prefWidth="250.0" AnchorPane.bottomAnchor="81.0" />
+                        <Label layoutX="52.0" layoutY="297.0" text="Les Tâches:" />
+                        <AnchorPane layoutY="443.0" prefHeight="28.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Separator layoutX="40.0" layoutY="15.0" prefHeight="0.0" prefWidth="518.0" />
+                              <Label layoutX="569.0" layoutY="6.0" text="©By AbedAFRIAD" textFill="#cdcdcd" />
+                           </children>
+                        </AnchorPane>
+                        <Button layoutX="619.0" layoutY="194.0" mnemonicParsing="false" onAction="#getForEdit" text="Editer" />
+                        <Button layoutX="607.0" layoutY="236.0" mnemonicParsing="false" onAction="#delete" text="Supprimer" />
+                        <Button layoutX="82.0" layoutY="392.0" mnemonicParsing="false" onAction="#editTache" prefHeight="25.0" prefWidth="68.0" text="Editer" />
+                        <Button layoutX="189.0" layoutY="392.0" mnemonicParsing="false" onAction="#supprTache" prefHeight="25.0" prefWidth="72.0" text="Supprimer" />
+                        <TableView fx:id="stagiaireTableView" layoutX="310.0" layoutY="313.0" prefHeight="76.0" prefWidth="259.0" AnchorPane.bottomAnchor="82.0" />
+                        <Button layoutX="366.0" layoutY="392.0" mnemonicParsing="false" onAction="#editStagiaire" prefHeight="25.0" prefWidth="74.0" text="Editer" />
+                        <Button layoutX="469.0" layoutY="392.0" mnemonicParsing="false" onAction="#supprStagiaire" prefHeight="25.0" prefWidth="72.0" text="Supprimer" />
+                        <Label layoutX="317.0" layoutY="297.0" text="Les Stagiaires:" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Editer Stage">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="121.0" prefWidth="0.0">
+                     <children>
+                        <ImageView fitHeight="438.0" fitWidth="610.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@stg3.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="36.0" layoutY="172.0" text="Nom Stage" />
+                        <TextField fx:id="nomEd" layoutX="126.0" layoutY="168.0" promptText="Nom de Stage" />
+                        <Label layoutX="36.0" layoutY="218.0" text="Date Debut" />
+                        <DatePicker fx:id="dateDebEd" layoutX="126.0" layoutY="214.0" prefHeight="25.0" prefWidth="148.0" promptText="JJ/MM/AAAA" />
+                        <Label layoutX="36.0" layoutY="263.0" text="Date Fin" />
+                        <DatePicker fx:id="dateFinEd" layoutX="126.0" layoutY="259.0" prefHeight="25.0" prefWidth="148.0" promptText="JJ/MM/AAAA" />
+                        <Label layoutX="316.0" layoutY="172.0" text="Encadrant" />
+                        <ComboBox fx:id="encadrantComboBoxEd" layoutX="407.0" layoutY="168.0" prefWidth="150.0" promptText="Select Encadrant" />
+                        <Label layoutX="316.0" layoutY="218.0" text="Departement" />
+                        <ComboBox fx:id="departementComboBoxEd" layoutX="407.0" layoutY="214.0" prefWidth="150.0" promptText="Select Departement" />
+                        <Button layoutX="435.0" layoutY="272.0" mnemonicParsing="false" onAction="#edit" text="Editer" />
+                        <Label layoutX="36.0" layoutY="307.0" text="Budget" />
+                        <TextField fx:id="budgetEd" layoutX="126.0" layoutY="303.0" promptText="Budget" />
+                        <ToolBar prefHeight="35.0" prefWidth="635.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <items>
+                              <Button mnemonicParsing="false" onAction="#mainmenu" text="Main Menu" />
+                              <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="0.0" />
+                              <Button mnemonicParsing="false" onAction="#stagiaire" text="Stagiaire" />
+                              <Button mnemonicParsing="false" onAction="#encadrant" text="Encadrant" />
+                              <Button mnemonicParsing="false" onAction="#departement" text="Departement" />
+                              <Button mnemonicParsing="false" onAction="#tache" text="Tâche" />
+                              <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="0.0" />
+                              <Button mnemonicParsing="false" onAction="#menutab" text="Stage Menu" />
+                              <Button mnemonicParsing="false" onAction="#recherchtab" text="Rechercher" />
+                              <Button mnemonicParsing="false" onAction="#edittab" text="Editer" />
+                              <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="36.0" />
+                           </items>
+                        </ToolBar>
+                        <Separator layoutX="294.0" layoutY="131.0" orientation="VERTICAL" prefHeight="256.0" prefWidth="22.0" />
+                        <AnchorPane layoutY="424.0" prefHeight="28.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Separator layoutX="27.0" layoutY="13.0" prefHeight="0.0" prefWidth="518.0" />
+                              <Label layoutX="545.0" layoutY="5.0" text="©By AbedAFRIAD" textFill="#cdcdcd" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

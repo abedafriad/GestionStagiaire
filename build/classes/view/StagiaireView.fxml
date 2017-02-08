@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="518.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.StagiaireViewController">
+   <children>
+      <TabPane fx:id="stagiairePane" prefHeight="518.0" prefWidth="634.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Stagiaire">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="455.0" fitWidth="639.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@stgr0.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="121.0" layoutY="286.0" mnemonicParsing="false" onAction="#ajouttab" text="Ajouter">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="255.0" layoutY="286.0" mnemonicParsing="false" onAction="#recherchtab" text="Rechercher">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="428.0" layoutY="286.0" mnemonicParsing="false" onAction="#edittab" text="Editer">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <AnchorPane prefHeight="28.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Separator layoutX="27.0" layoutY="13.0" prefHeight="0.0" prefWidth="518.0" />
+                              <Label layoutX="545.0" layoutY="5.0" text="©By AbedAFRIAD" textFill="#cdcdcd" />
+                           </children>
+                        </AnchorPane>
+                        <ToolBar prefHeight="35.0" prefWidth="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <items>
+                              <Button mnemonicParsing="false" onAction="#mainmenu" text="Main Menu" />
+                              <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="18.0" />
+                              <Button mnemonicParsing="false" onAction="#stage" text="Stage" />
+                              <Button mnemonicParsing="false" onAction="#encadrant" text="Encadrant" />
+                              <Button mnemonicParsing="false" onAction="#departement" text="Departement" />
+                              <Button mnemonicParsing="false" onAction="#tache" text="Tâche" />
+                              <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="36.0" />
+                           </items>
+                        </ToolBar>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab closable="false" text="Ajout Stagiaire">
+               <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="456.0" prefWidth="635.0">
+                     <children>
+                        <ImageView fitHeight="456.0" fitWidth="634.0" layoutX="-1.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@stgr1.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="40.0" layoutY="138.0" text="Nom" />
+                        <TextField fx:id="nom" layoutX="140.0" layoutY="133.0" prefHeight="25.0" prefWidth="160.0" promptText="Nom" />
+                        <Label layoutX="40.0" layoutY="171.0" text="Prenom" />
+                        <TextField fx:id="prenom" layoutX="140.0" layoutY="168.0" prefHeight="25.0" prefWidth="160.0" promptText="Prenom" />
+                        <Label layoutX="40.0" layoutY="207.0" text="Date Naissance" />
+                        <DatePicker fx:id="dateNaissance" layoutX="140.0" layoutY="203.0" prefHeight="25.0" prefWidth="160.0" promptText="JJ/MM/AAAA" />
+                        <Label layoutX="40.0" layoutY="239.0" text="Gender" />
+                        <Label layoutX="40.0" layoutY="272.0" text="Telephone" />
+                        <TextField fx:id="telephone" layoutX="140.0" layoutY="268.0" prefHeight="25.0" prefWidth="160.0" promptText="+(XXX)x xx xx xx xx " />
+                        <Label layoutX="40.0" layoutY="305.0" text="E-Mail" />
+                        <TextField fx:id="email" layoutX="140.0" layoutY="301.0" prefHeight="25.0" prefWidth="160.0" promptText="exemple@mail.com" />
+                        <Label layoutX="40.0" layoutY="339.0" text="Etablisseent" />
+                        <TextField fx:id="etablissement" layoutX="140.0" layoutY="335.0" prefHeight="25.0" prefWidth="160.0" promptText="Etablissement" />
+                        <Label layoutX="40.0" layoutY="374.0" text="Filière" />
+                        <TextField fx:id="filiere" layoutX="140.0" layoutY="370.0" prefHeight="25.0" prefWidth="160.0" promptText="Filière" />
+                        <Label layoutX="40.0" layoutY="408.0" text="Niveau" />
+                        <TextField fx:id="niveau" layoutX="140.0" layoutY="404.0" prefHeight="25.0" prefWidth="160.0" promptText="Niveau" />
+                        <Label layoutX="341.0" layoutY="140.0" text="Adresse" />
+                        <TextArea fx:id="adresse" layoutX="438.0" layoutY="139.0" prefHeight="68.0" prefWidth="160.0" promptText="Adresse" />
+                        <Separator layoutX="293.0" layoutY="90.0" orientation="VERTICAL" prefHeight="315.0" prefWidth="48.0" />
+                        <Label layoutX="341.0" layoutY="247.0" text="Stage" />
+                        <ComboBox fx:id="stageeComboBox" layoutX="437.0" layoutY="241.0" onAction="#syncComboBoxS" prefWidth="160.0" promptText="Select Stage" />
+                        <Label layoutX="341.0" layoutY="284.0" text="Departement" />
+                        <ComboBox fx:id="departementComboBox" layoutX="438.0" layoutY="281.0" prefWidth="160.0" promptText="Select Departement" />
+                        <Label layoutX="341.0" layoutY="329.0" text="Encadrant" />
+                        <ComboBox fx:id="encadrantComboBox" layoutX="437.0" layoutY="323.0" onAction="#syncComboBoxE" prefWidth="160.0" promptText="Select Encadrant" />
+                        <Button layoutX="490.0" layoutY="393.0" mnemonicParsing="false" onAction="#ajoute" text="Ajouter" />
+                        <RadioButton fx:id="rb1" layoutX="177.0" layoutY="239.0" mnemonicParsing="false" text="M">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="gender" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rb2" layoutX="239.0" layoutY="239.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="52.0" text="F" toggleGroup="$gender" />
+                        <ToolBar layoutX="8.0" prefHeight="35.0" prefWidth="635.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                          <items>
+                            <Button mnemonicParsing="false" onAction="#mainmenu" text="Main Menu" />
+                              <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="18.0" />
+                              <Button mnemonicParsing="false" onAction="#stage" text="Stage" />
+                              <Button mnemonicParsing="false" onAction="#encadrant" text="Encadrant" />
+                              <Button mnemonicParsing="false" onAction="#departement" text="Departement" />
+                              <Button mnemonicParsing="false" onAction="#tache" text="Tâche" />
+                              <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="28.0" />
+                              <Button mnemonicParsing="false" onAction="#menutab" text="Stagiaire Menu" />
+                              <Button mnemonicParsing="false" onAction="#recherchtab" text="Rechercher" />
+                              <Button mnemonicParsing="false" onAction="#edittab" text="Editer" />
+                              <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="36.0" />
+                          </items>
+                        </ToolBar>
+                        <AnchorPane prefHeight="28.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0">
+                           <children>
+                              <Separator layoutX="27.0" layoutY="13.0" prefHeight="0.0" prefWidth="518.0" />
+                              <Label layoutX="545.0" layoutY="5.0" text="©By AbedAFRIAD" textFill="#cdcdcd" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+          <Tab text="Recherch Stagiare">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="458.0" fitWidth="634.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@stgr2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="36.0" layoutY="137.0" text="Nom" />
+                        <TextField fx:id="nomRech" layoutX="83.0" layoutY="133.0" prefHeight="25.0" prefWidth="104.0" promptText="Nom" />
+                        <Label layoutX="207.0" layoutY="145.0" text="Prenom" />
+                        <TextField fx:id="prenomRech" layoutX="295.0" layoutY="141.0" prefHeight="25.0" prefWidth="108.0" promptText="Prenom" />
+                        <Label layoutX="422.0" layoutY="143.0" text="Gender" />
+                        <RadioButton fx:id="rb1Rech" layoutX="501.0" layoutY="143.0" mnemonicParsing="false" text="M">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="genderRech" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rb2Rech" layoutX="546.0" layoutY="143.0" mnemonicParsing="false" text="F" toggleGroup="$genderRech" />
+                        <Label layoutX="39.0" layoutY="178.0" text="Stage" />
+                        <ComboBox fx:id="stageeComboBoxRech" layoutX="83.0" layoutY="174.0" prefHeight="25.0" prefWidth="105.0" promptText="--Select-- " />
+                        <Label layoutX="207.0" layoutY="186.0" text="Departement" />
+                        <ComboBox fx:id="departementComboBoxRech" layoutX="296.0" layoutY="182.0" prefHeight="25.0" prefWidth="105.0" promptText="--Select-- " />
+                        <Label layoutX="422.0" layoutY="184.0" text="Encadrant" />
+                        <ComboBox fx:id="encadrantComboBoxRech" cache="true" layoutX="487.0" layoutY="180.0" prefHeight="25.0" prefWidth="105.0" promptText="--Select-- " />
+                        <Button layoutX="282.0" layoutY="223.0" mnemonicParsing="false" onAction="#recherche" text="Recherche" />
+                        <Label fx:id="message" layoutX="29.0" layoutY="226.0" prefHeight="19.0" prefWidth="194.0" text="Les élements Trouvées:" visible="false">
+                           <font>
+                              <Font name="Eras Demi ITC" size="16.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="stagiareTableView" layoutX="43.0" layoutY="251.0" prefHeight="161.0" prefWidth="444.0" AnchorPane.bottomAnchor="66.0" AnchorPane.leftAnchor="43.0" AnchorPane.rightAnchor="147.0" />
+                        <ToolBar prefHeight="35.0" prefWidth="635.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <items>
+                              <Button mnemonicParsing="false" onAction="#mainmenu" text="Main Menu" />
+                              <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="18.0" />
+                              <Button mnemonicParsing="false" onAction="#stage" text="Stage" />
+                              <Button mnemonicParsing="false" onAction="#encadrant" text="Encadrant" />
+                              <Button mnemonicParsing="false" onAction="#departement" text="Departement" />
+                              <Button mnemonicParsing="false" onAction="#tache" text="Tâche" />
+                              <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="36.0" />
+                              <Button mnemonicParsing="false" onAction="#menutab" text="Stagiaire Menu" />
+                              <Button mnemonicParsing="false" onAction="#ajouttab" text="Ajouter" />
+                              <Button mnemonicParsing="false" onAction="#edittab" text="Editer" />
+                              <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="36.0" />
+                           </items>
+                        </ToolBar>
+                        <AnchorPane prefHeight="28.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0">
+                           <children>
+                              <Separator layoutX="27.0" layoutY="13.0" prefHeight="0.0" prefWidth="518.0" />
+                              <Label layoutX="545.0" layoutY="5.0" text="©By AbedAFRIAD" textFill="#cdcdcd" />
+                           </children>
+                        </AnchorPane>
+                        <Button layoutX="524.0" layoutY="296.0" mnemonicParsing="false" onAction="#getForEdit" text="Editer" />
+                        <Button layoutX="511.0" layoutY="345.0" mnemonicParsing="false" onAction="#delete" text="Supprimer" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Edit Stagiaire">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="456.0" prefWidth="635.0">
+                     <children>
+                        <ImageView fitHeight="465.0" fitWidth="640.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@stgr3.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="40.0" layoutY="149.0" text="Nom" />
+                        <TextField fx:id="nomEd" layoutX="140.0" layoutY="144.0" prefHeight="25.0" prefWidth="160.0" promptText="Nom" />
+                        <Label layoutX="40.0" layoutY="182.0" text="Prenom" />
+                        <TextField fx:id="prenomEd" layoutX="140.0" layoutY="179.0" prefHeight="25.0" prefWidth="160.0" promptText="Prenom" />
+                        <Label layoutX="40.0" layoutY="218.0" text="Date Naissance" />
+                        <DatePicker fx:id="dateNaissanceEd" layoutX="140.0" layoutY="214.0" prefHeight="25.0" prefWidth="160.0" promptText="JJ/MM/AAAA" />
+                        <Label layoutX="40.0" layoutY="250.0" text="Gender" />
+                        <Label layoutX="40.0" layoutY="283.0" text="Telephone" />
+                        <TextField fx:id="telephoneEd" layoutX="140.0" layoutY="279.0" prefHeight="25.0" prefWidth="160.0" promptText="+(XXX)x xx xx xx xx " />
+                        <Label layoutX="40.0" layoutY="316.0" text="E-Mail" />
+                        <TextField fx:id="emailEd" layoutX="140.0" layoutY="312.0" prefHeight="25.0" prefWidth="160.0" promptText="exemple@mail.com" />
+                        <Label layoutX="40.0" layoutY="350.0" text="Etablisseent" />
+                        <TextField fx:id="etablissementEd" layoutX="140.0" layoutY="346.0" prefHeight="25.0" prefWidth="160.0" promptText="Etablissement" />
+                        <Label layoutX="40.0" layoutY="385.0" text="Filière" />
+                        <TextField fx:id="filiereEd" layoutX="140.0" layoutY="381.0" prefHeight="25.0" prefWidth="160.0" promptText="Filière" />
+                        <Label layoutX="40.0" layoutY="419.0" text="Niveau" />
+                        <TextField fx:id="niveauEd" layoutX="140.0" layoutY="415.0" prefHeight="25.0" prefWidth="160.0" promptText="Niveau" />
+                        <Label layoutX="336.0" layoutY="149.0" text="Adresse" />
+                        <TextArea fx:id="adresseEd" layoutX="434.0" layoutY="145.0" prefHeight="68.0" prefWidth="160.0" promptText="Adresse" />
+                        <Separator layoutX="293.0" layoutY="128.0" orientation="VERTICAL" prefHeight="315.0" prefWidth="48.0" />
+                        <Label layoutX="342.0" layoutY="236.0" text="Stage" />
+                        <ComboBox fx:id="stageeComboBoxEd" layoutX="434.0" layoutY="230.0" onAction="#syncComboBoxS" prefWidth="160.0" promptText="Select Stage" />
+                        <Label layoutX="343.0" layoutY="277.0" text="Departement" />
+                        <ComboBox fx:id="departementComboBoxEd" layoutX="435.0" layoutY="270.0" prefWidth="160.0" promptText="Select Departement" />
+                        <Label layoutX="346.0" layoutY="316.0" text="Encadrant" />
+                        <ComboBox fx:id="encadrantComboBoxEd" layoutX="434.0" layoutY="312.0" onAction="#syncComboBoxE" prefWidth="160.0" promptText="Select Encadrant" />
+                        <Button layoutX="467.0" layoutY="369.0" mnemonicParsing="false" onAction="#edit" text="Editer" />
+                        <RadioButton fx:id="rb1Ed" layoutX="177.0" layoutY="250.0" mnemonicParsing="false" text="M">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="gender1" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rb2Ed" layoutX="239.0" layoutY="250.0" mnemonicParsing="false" text="F" toggleGroup="$gender1" />
+                        <ToolBar layoutX="8.0" prefHeight="35.0" prefWidth="635.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <items>
+                              <Button mnemonicParsing="false" onAction="#mainmenu" text="Main Menu" />
+                              <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="18.0" />
+                              <Button mnemonicParsing="false" onAction="#stage" text="Stage" />
+                              <Button mnemonicParsing="false" onAction="#encadrant" text="Encadrant" />
+                              <Button mnemonicParsing="false" onAction="#departement" text="Departement" />
+                              <Button mnemonicParsing="false" onAction="#tache" text="Tâche" />
+                              <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="28.0" />
+                              <Button mnemonicParsing="false" onAction="#menutab" text="Stagiaire Menu" />
+                              <Button mnemonicParsing="false" onAction="#ajouttab" text="Ajouter" />
+                              <Button mnemonicParsing="false" onAction="#recherchtab" text="Rechercher" />
+                              <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="36.0" />
+                           </items>
+                        </ToolBar>
+                        <AnchorPane prefHeight="28.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0">
+                           <children>
+                              <Separator layoutX="27.0" layoutY="13.0" prefHeight="0.0" prefWidth="518.0" />
+                              <Label layoutX="545.0" layoutY="5.0" text="©By AbedAFRIAD" textFill="#cdcdcd" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

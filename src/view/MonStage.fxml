@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="504.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MonStageController">
+   <children>
+      <TabPane fx:id="stagiairePane" prefHeight="505.0" prefWidth="665.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Gerer Mon Stage">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="475.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@monS0.JPG" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="195.0" layoutY="140.0" text="Encadrant:">
+                           <font>
+                              <Font name="Maiandra GD" size="18.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endY="0.819047619047619" startY="0.19047619047619047">
+                                 <stops>
+                                    <Stop color="#0090ff" />
+                                    <Stop color="#00105e" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill></Label>
+                        <Label fx:id="encaLabel" layoutX="321.0" layoutY="140.0" prefHeight="23.0" prefWidth="288.0" text="Label">
+                           <font>
+                              <Font name="Maiandra GD" size="18.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endY="0.819047619047619" startY="0.19047619047619047">
+                                 <stops>
+                                    <Stop color="#0090ff" />
+                                    <Stop color="#00105e" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill></Label>
+                        <Label layoutX="195.0" layoutY="227.0" text="Stage:">
+                           <font>
+                              <Font name="Maiandra GD" size="18.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endY="0.819047619047619" startY="0.19047619047619047">
+                                 <stops>
+                                    <Stop color="#0090ff" />
+                                    <Stop color="#00105e" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill></Label>
+                        <Label fx:id="deptLabel" layoutX="321.0" layoutY="180.0" prefHeight="23.0" prefWidth="237.0" text="Label">
+                           <font>
+                              <Font name="Maiandra GD" size="18.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endY="0.819047619047619" startY="0.19047619047619047">
+                                 <stops>
+                                    <Stop color="#0090ff" />
+                                    <Stop color="#00105e" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill></Label>
+                        <Label layoutX="195.0" layoutY="180.0" text="Departement:">
+                           <font>
+                              <Font name="Maiandra GD" size="18.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endY="0.819047619047619" startY="0.19047619047619047">
+                                 <stops>
+                                    <Stop color="#0090ff" />
+                                    <Stop color="#00105e" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill></Label>
+                        <Label fx:id="stageLabel" layoutX="321.0" layoutY="227.0" prefHeight="23.0" prefWidth="245.0" text="Label">
+                           <font>
+                              <Font name="Maiandra GD" size="18.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endY="0.819047619047619" startY="0.19047619047619047">
+                                 <stops>
+                                    <Stop color="#0090ff" />
+                                    <Stop color="#00105e" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill></Label>
+                        <Label layoutX="195.0" layoutY="271.0" text="Avancement:">
+                           <font>
+                              <Font name="Maiandra GD" size="18.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endY="0.819047619047619" startY="0.19047619047619047">
+                                 <stops>
+                                    <Stop color="#0090ff" />
+                                    <Stop color="#00105e" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill></Label>
+                        <Label fx:id="avancLabel" layoutX="321.0" layoutY="271.0" prefHeight="23.0" prefWidth="248.0" text="Label">
+                           <font>
+                              <Font name="Maiandra GD" size="18.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endY="0.819047619047619" startY="0.19047619047619047">
+                                 <stops>
+                                    <Stop color="#0090ff" />
+                                    <Stop color="#00105e" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill></Label>
+                        <Label layoutX="198.0" layoutY="318.0" text="Budget:">
+                           <font>
+                              <Font name="Maiandra GD" size="18.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endY="0.819047619047619" startY="0.19047619047619047">
+                                 <stops>
+                                    <Stop color="#0090ff" />
+                                    <Stop color="#00105e" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill></Label>
+                        <Label fx:id="budgetLabel" layoutX="321.0" layoutY="318.0" prefHeight="23.0" prefWidth="244.0" text="Label">
+                           <font>
+                              <Font name="Maiandra GD" size="18.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endY="0.819047619047619" startY="0.19047619047619047">
+                                 <stops>
+                                    <Stop color="#0090ff" />
+                                    <Stop color="#00105e" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill></Label>
+                        <Button layoutX="96.0" layoutY="366.0" mnemonicParsing="false" onAction="#mainmenu" text="&lt;&lt;Retour" />
+                        <Button layoutX="333.0" layoutY="366.0" mnemonicParsing="false" onAction="#menuStagtab" text="Gerer les Stagiaires &gt;" />
+                        <Button layoutX="467.0" layoutY="366.0" mnemonicParsing="false" onAction="#menuTachetab" text="Gerer Les Tâches &gt;&gt;" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Mes Stagiaires">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="240.0" prefWidth="256.0">
+                     <children>
+                        <ImageView fitHeight="478.0" fitWidth="665.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@monS1.JPG" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="stagiareTableView1" layoutX="130.0" layoutY="128.0" prefHeight="200.0" prefWidth="406.0" />
+                        <Button layoutX="423.0" layoutY="372.0" mnemonicParsing="false" onAction="#ajouttab" text="Ajouter &gt;" />
+                        <Button layoutX="239.0" layoutY="338.0" mnemonicParsing="false" onAction="#getForEdit1" prefHeight="25.0" prefWidth="73.0" text="Editer" />
+                        <Button layoutX="342.0" layoutY="338.0" mnemonicParsing="false" onAction="#delete1" text="Supprimer" />
+                        <Button layoutX="498.0" layoutY="372.0" mnemonicParsing="false" onAction="#recherchtab" text="Rechercher &gt;&gt;" />
+                        <Button layoutX="79.0" layoutY="372.0" mnemonicParsing="false" onAction="#menutab" text="&lt;&lt;Retour" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab closable="false" text="Ajout Stagiaire">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="456.0" prefWidth="635.0">
+                     <children>
+                        <ImageView fitHeight="477.0" fitWidth="665.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@monS2.JPG" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="67.0" layoutY="162.0" text="Nom" />
+                        <TextField fx:id="nom" layoutX="155.0" layoutY="159.0" prefHeight="25.0" prefWidth="150.0" promptText="Nom" />
+                        <Label layoutX="67.0" layoutY="195.0" text="Prenom" />
+                        <TextField fx:id="prenom" layoutX="155.0" layoutY="194.0" prefHeight="25.0" prefWidth="150.0" promptText="Prenom" />
+                        <Label layoutX="67.0" layoutY="231.0" text="Date Naissance" />
+                        <DatePicker fx:id="dateNaissance" layoutX="155.0" layoutY="229.0" prefHeight="25.0" prefWidth="150.0" promptText="JJ/MM/AAAA" />
+                        <Label layoutX="67.0" layoutY="263.0" text="Gender" />
+                        <Label layoutX="67.0" layoutY="296.0" text="Telephone" />
+                        <TextField fx:id="telephone" layoutX="155.0" layoutY="294.0" prefHeight="25.0" prefWidth="150.0" promptText="+(XXX)x xx xx xx xx " />
+                        <Label layoutX="67.0" layoutY="329.0" text="E-Mail" />
+                        <TextField fx:id="email" layoutX="155.0" layoutY="327.0" prefHeight="25.0" prefWidth="150.0" promptText="exemple@mail.com" />
+                        <Label layoutX="350.0" layoutY="169.0" text="Etablisseent" />
+                        <TextField fx:id="etablissement" layoutX="450.0" layoutY="165.0" prefHeight="25.0" prefWidth="150.0" promptText="Etablissement" />
+                        <Label layoutX="350.0" layoutY="204.0" text="Filière" />
+                        <TextField fx:id="filiere" layoutX="450.0" layoutY="200.0" prefHeight="25.0" prefWidth="150.0" promptText="Filière" />
+                        <Label layoutX="350.0" layoutY="238.0" text="Niveau" />
+                        <TextField fx:id="niveau" layoutX="450.0" layoutY="234.0" prefHeight="25.0" prefWidth="150.0" promptText="Niveau" />
+                        <Label layoutX="350.0" layoutY="270.0" text="Adresse" />
+                        <TextArea fx:id="adresse" layoutX="450.0" layoutY="270.0" prefHeight="68.0" prefWidth="150.0" promptText="Adresse" />
+                        <Separator layoutX="309.0" layoutY="155.0" orientation="VERTICAL" prefHeight="217.0" prefWidth="48.0" />
+                        <Button layoutX="496.0" layoutY="370.0" mnemonicParsing="false" onAction="#ajoute" text="Ajouter">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Button>
+                        <RadioButton fx:id="rb1" layoutX="177.0" layoutY="263.0" mnemonicParsing="false" text="M">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="gender" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rb2" layoutX="239.0" layoutY="263.0" mnemonicParsing="false" text="F" toggleGroup="$gender" />
+                        <AnchorPane prefHeight="28.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0">
+                           <children>
+                              <Separator layoutX="27.0" layoutY="13.0" prefHeight="0.0" prefWidth="518.0" />
+                              <Label layoutX="545.0" layoutY="5.0" text="©By AbedAFRIAD" textFill="#cdcdcd" />
+                           </children>
+                        </AnchorPane>
+                        <Button layoutX="89.0" layoutY="370.0" mnemonicParsing="false" onAction="#menuStagtab" text="&lt;&lt;Retour" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Recherche Stagiaire">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="476.0" fitWidth="695.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@monS3.JPG" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="99.0" layoutY="160.0" text="Nom" />
+                        <TextField fx:id="nomRech" layoutX="134.0" layoutY="156.0" prefHeight="25.0" prefWidth="104.0" promptText="Nom" />
+                        <Label layoutX="258.0" layoutY="160.0" text="Prenom" />
+                        <TextField fx:id="prenomRech" layoutX="308.0" layoutY="156.0" prefHeight="25.0" prefWidth="108.0" promptText="Prenom" />
+                        <Label layoutX="441.0" layoutY="160.0" text="Gender" />
+                        <RadioButton fx:id="rb1Rech" layoutX="499.0" layoutY="160.0" mnemonicParsing="false" text="M">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="genderRech1" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rb2Rech" layoutX="539.0" layoutY="160.0" mnemonicParsing="false" text="F" toggleGroup="$genderRech1" />
+                        <Button layoutX="297.0" layoutY="188.0" mnemonicParsing="false" onAction="#recherche" text="Recherche" />
+                        <Label fx:id="message1" layoutX="29.0" layoutY="226.0" prefHeight="19.0" prefWidth="194.0" text="Les élements Trouvées:" visible="false">
+                           <font>
+                              <Font name="Eras Demi ITC" size="16.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="stagiareTableView" layoutX="100.0" layoutY="219.0" prefHeight="148.0" prefWidth="466.0" AnchorPane.bottomAnchor="109.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="99.0" />
+                        <AnchorPane prefHeight="28.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0">
+                           <children>
+                              <Separator layoutX="27.0" layoutY="13.0" prefHeight="0.0" prefWidth="518.0" />
+                              <Label layoutX="545.0" layoutY="5.0" text="©By AbedAFRIAD" textFill="#cdcdcd" />
+                           </children>
+                        </AnchorPane>
+                        <Button layoutX="531.0" layoutY="380.0" mnemonicParsing="false" onAction="#getForEdit" text="Editer &gt;" />
+                        <Button layoutX="431.0" layoutY="380.0" mnemonicParsing="false" onAction="#delete" text="Supprimer" />
+                        <Button layoutX="66.0" layoutY="380.0" mnemonicParsing="false" onAction="#menuStagtab" text="&lt;&lt;Retour" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Editer Stagiare">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="456.0" prefWidth="635.0">
+                     <children>
+                        <ImageView fitHeight="477.0" fitWidth="665.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@monS4.JPG" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="59.0" layoutY="165.0" text="Nom" />
+                        <TextField fx:id="nomEd" layoutX="159.0" layoutY="160.0" prefHeight="25.0" prefWidth="150.0" promptText="Nom" />
+                        <Label layoutX="59.0" layoutY="198.0" text="Prenom" />
+                        <TextField fx:id="prenomEd" layoutX="159.0" layoutY="195.0" prefHeight="25.0" prefWidth="150.0" promptText="Prenom" />
+                        <Label layoutX="59.0" layoutY="234.0" text="Date Naissance" />
+                        <DatePicker fx:id="dateNaissanceEd" layoutX="159.0" layoutY="230.0" prefHeight="25.0" prefWidth="150.0" promptText="JJ/MM/AAAA" />
+                        <Label layoutX="59.0" layoutY="266.0" text="Gender" />
+                        <Label layoutX="59.0" layoutY="299.0" text="Telephone" />
+                        <TextField fx:id="telephoneEd" layoutX="159.0" layoutY="295.0" prefHeight="25.0" prefWidth="150.0" promptText="+(XXX)x xx xx xx xx " />
+                        <Label layoutX="59.0" layoutY="332.0" text="E-Mail" />
+                        <TextField fx:id="emailEd" layoutX="159.0" layoutY="328.0" prefHeight="25.0" prefWidth="150.0" promptText="exemple@mail.com" />
+                        <Label layoutX="350.0" layoutY="162.0" text="Etablisseent" />
+                        <TextField fx:id="etablissementEd" layoutX="450.0" layoutY="158.0" prefHeight="25.0" prefWidth="150.0" promptText="Etablissement" />
+                        <Label layoutX="350.0" layoutY="197.0" text="Filière" />
+                        <TextField fx:id="filiereEd" layoutX="450.0" layoutY="193.0" prefHeight="25.0" prefWidth="150.0" promptText="Filière" />
+                        <Label layoutX="350.0" layoutY="231.0" text="Niveau" />
+                        <TextField fx:id="niveauEd" layoutX="450.0" layoutY="227.0" prefHeight="25.0" prefWidth="150.0" promptText="Niveau" />
+                        <Label layoutX="350.0" layoutY="263.0" text="Adresse" />
+                        <TextArea fx:id="adresseEd" layoutX="450.0" layoutY="263.0" prefHeight="68.0" prefWidth="150.0" promptText="Adresse" />
+                        <Separator layoutX="309.0" layoutY="158.0" orientation="VERTICAL" prefHeight="217.0" prefWidth="48.0" />
+                        <Button layoutX="502.0" layoutY="371.0" mnemonicParsing="false" onAction="#edit" text="Editer" />
+                        <RadioButton fx:id="rb1Ed" layoutX="196.0" layoutY="266.0" mnemonicParsing="false" text="M">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="gender1" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rb2Ed" layoutX="258.0" layoutY="266.0" mnemonicParsing="false" text="F" toggleGroup="$gender1" />
+                        <AnchorPane prefHeight="28.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0">
+                           <children>
+                              <Separator layoutX="27.0" layoutY="13.0" prefHeight="0.0" prefWidth="518.0" />
+                              <Label layoutX="545.0" layoutY="5.0" text="©By AbedAFRIAD" textFill="#cdcdcd" />
+                           </children>
+                        </AnchorPane>
+                        <Button layoutX="81.0" layoutY="371.0" mnemonicParsing="false" onAction="#menuStagtab" text="&lt;&lt;Retour" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Les Tache De Mon Stage">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="477.0" fitWidth="665.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@monS5.JPG" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="tacheTableView" layoutX="127.0" layoutY="138.0" prefHeight="200.0" prefWidth="412.0" />
+                        <Button layoutX="82.0" layoutY="361.0" mnemonicParsing="false" onAction="#menutab" text="&lt;&lt;Retour" />
+                        <Button fx:id="editAvancButton" layoutX="201.0" layoutY="349.0" mnemonicParsing="false" onAction="#geteditAvanc" text="Editer Avancement" />
+                        <Button layoutX="341.0" layoutY="349.0" mnemonicParsing="false" onAction="#setComplet" prefHeight="25.0" prefWidth="112.0" text="Set Complet" />
+                        <AnchorPane fx:id="tacheEditAvanc" layoutX="145.0" layoutY="185.0" prefHeight="107.0" prefWidth="362.0" visible="false">
+                           <children>
+                              <Button layoutX="271.0" layoutY="41.0" mnemonicParsing="false" onAction="#editAvanc" text="Enregistrer" />
+                              <TextField fx:id="tacheAvanc" layoutX="115.0" layoutY="41.0" />
+                              <Label fx:id="tacheInfo" layoutX="14.0" layoutY="45.0" prefHeight="17.0" prefWidth="99.0" text="Label" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

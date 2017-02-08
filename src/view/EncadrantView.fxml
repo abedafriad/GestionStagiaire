@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="659.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.EncadrantViewController">
+   <children>
+      <TabPane fx:id="encadrantPane" prefHeight="500.0" prefWidth="662.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Les Demandes ">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="473.0" fitWidth="668.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@enc0.jpg" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="encaAttTableView" layoutX="133.0" layoutY="122.0" prefHeight="200.0" prefWidth="396.0" />
+                        <Button layoutX="295.0" layoutY="343.0" mnemonicParsing="false" onAction="#accept" text="Approuver" />
+                        <Button layoutX="457.0" layoutY="343.0" mnemonicParsing="false" onAction="#decline" text="Supprimer" />
+                        <Button layoutX="133.0" layoutY="343.0" mnemonicParsing="false" onAction="#mainmenu" text="&lt;&lt;Retour" />
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+          <Tab text="Recherche Encadrant">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="463.0" prefWidth="692.0">
+                     <children>
+                        <ImageView fitHeight="478.0" fitWidth="662.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@enc1.jpg" />
+                           </image>
+                        </ImageView>
+                        <AnchorPane prefHeight="28.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0">
+                           <children>
+                              <Separator layoutX="27.0" layoutY="13.0" prefHeight="0.0" prefWidth="518.0" />
+                              <Label layoutX="565.0" layoutY="5.0" text="©By AbedAFRIAD" textFill="#cdcdcd" />
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="239.0" layoutY="124.0" text="Nom" />
+                        <TextField fx:id="nomRec" layoutX="288.0" layoutY="120.0" prefHeight="25.0" prefWidth="115.0" />
+                        <Label layoutX="421.0" layoutY="124.0" text="Prenom" />
+                        <TextField fx:id="prenomRec" layoutX="507.0" layoutY="120.0" prefHeight="25.0" prefWidth="116.0" />
+                        <Label layoutX="40.0" layoutY="169.0" text="Gender" />
+                        <RadioButton fx:id="rbMRech" layoutX="91.0" layoutY="169.0" mnemonicParsing="false" text="Male">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="genderRech" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rbFRech" layoutX="146.0" layoutY="169.0" mnemonicParsing="false" text="Female" toggleGroup="$genderRech" />
+                        <Label layoutX="239.0" layoutY="169.0" text="Stage" />
+                        <ComboBox fx:id="stageeRechComboBox" layoutX="288.0" layoutY="165.0" prefHeight="25.0" prefWidth="117.0" />
+                        <Label layoutX="424.0" layoutY="169.0" text="Departement" />
+                        <ComboBox fx:id="departementRechComboBox" layoutX="507.0" layoutY="165.0" prefHeight="25.0" prefWidth="117.0" />
+                        <Button layoutX="293.0" layoutY="211.0" mnemonicParsing="false" onAction="#recherch" text="Rechercher" />
+                        <TableView fx:id="encaTableView" layoutX="50.0" layoutY="245.0" prefHeight="136.0" prefWidth="454.0" />
+                        <Button layoutX="543.0" layoutY="348.0" mnemonicParsing="false" onAction="#delete" text="Supprimer" />
+                        <TextField fx:id="loginRec" layoutX="89.0" layoutY="120.0" prefHeight="25.0" prefWidth="114.0" />
+                        <Label layoutX="40.0" layoutY="124.0" text="Login" />
+                        <Button layoutX="533.0" layoutY="256.0" mnemonicParsing="false" onAction="#setRoot" text="Set SuperUser" />
+                        <Button layoutX="55.0" layoutY="394.0" mnemonicParsing="false" onAction="#mainmenu" text="&lt;&lt;Retour" />
+                        <Button layoutX="550.0" layoutY="299.0" mnemonicParsing="false" onAction="#block" text="Bloquer" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

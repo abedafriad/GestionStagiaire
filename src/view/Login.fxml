@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.LoginController">
+   <children>
+      <TabPane fx:id="pane" prefHeight="500.0" prefWidth="659.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Welcome">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="471.0" fitWidth="659.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.28570556640625" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@loginBg.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="340.0" layoutY="270.0" mnemonicParsing="false" onAction="#creeCompte" prefHeight="35.0" prefWidth="131.0" text="Crée Compte">
+                           <font>
+                              <Font name="Maiandra GD" size="18.0" />
+                           </font></Button>
+                        <Button layoutX="193.0" layoutY="270.0" mnemonicParsing="false" onAction="#toLogin" text="Se Connecter">
+                           <font>
+                              <Font name="Maiandra GD" size="18.0" />
+                           </font></Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Log In">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="472.0" fitWidth="659.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@seConecterBG.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="196.0" layoutY="239.0" text="Login">
+                           <font>
+                              <Font name="Maiandra GD" size="14.0" />
+                           </font></Label>
+                        <TextField fx:id="login" layoutX="315.0" layoutY="235.0" promptText="Votre Login" />
+                        <Label layoutX="196.0" layoutY="271.0" text="Mot de Passe">
+                           <font>
+                              <Font name="Maiandra GD" size="14.0" />
+                           </font></Label>
+                        <PasswordField fx:id="password" layoutX="315.0" layoutY="267.0" promptText="***************" />
+                        <Button layoutX="258.0" layoutY="300.0" mnemonicParsing="false" onAction="#seConnect" text="Se Connecter">
+                           <font>
+                              <Font name="Maiandra GD" size="16.0" />
+                           </font></Button>
+                        <Label layoutX="258.0" layoutY="339.0" text="Vous avez pas de Compte?">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="274.0" layoutY="354.0" mnemonicParsing="false" onAction="#creeCompte" text="Crée un Compte">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

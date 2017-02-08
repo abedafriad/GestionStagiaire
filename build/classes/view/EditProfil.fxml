@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60" fx:controller="view.EditProfilController">
+   <children>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="700.0">
+         <children>
+            <ImageView fitHeight="500.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@EditProfile.JPG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rootView" fitHeight="500.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@EditProfileRoot.JPG" />
+               </image>
+            </ImageView>
+            <Label layoutX="84.0" layoutY="159.0" text="Mot De Passe" />
+            <TextField fx:id="password" layoutX="180.0" layoutY="155.0" promptText="**********" />
+            <Label layoutX="85.0" layoutY="195.0" text="Nom" />
+            <TextField fx:id="nomEd" layoutX="180.0" layoutY="191.0" promptText="Nom" />
+            <Label layoutX="84.0" layoutY="233.0" text="Prenom" />
+            <TextField fx:id="prenomEd" layoutX="180.0" layoutY="229.0" promptText="Prenom" />
+            <Label layoutX="83.0" layoutY="273.0" text="Telephone" />
+            <TextField fx:id="telephoneEd" layoutX="180.0" layoutY="269.0" promptText="Telephone" />
+            <Label layoutX="85.0" layoutY="309.0" text="Gender" />
+            <RadioButton fx:id="rbMEd" layoutX="180.0" layoutY="309.0" mnemonicParsing="false" text="Male">
+               <toggleGroup>
+                  <ToggleGroup fx:id="gender1" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbFEd" layoutX="255.0" layoutY="309.0" mnemonicParsing="false" text="Female" toggleGroup="$gender1" />
+            <Label layoutX="366.0" layoutY="157.0" text="E-Mail" />
+            <TextField fx:id="emailEd" layoutX="465.0" layoutY="153.0" promptText="E-Mail" />
+            <Label layoutX="366.0" layoutY="193.0" text="Adresse" />
+            <TextArea fx:id="adresseEd" layoutX="464.0" layoutY="188.0" prefHeight="49.0" prefWidth="150.0" promptText="Adresse" />
+            <AnchorPane fx:id="root" layoutX="356.0" layoutY="237.0" prefHeight="89.0" prefWidth="274.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="54.0" text="Stage" />
+                  <ComboBox fx:id="departementComboBoxEd" layoutX="110.0" layoutY="15.0" onAction="#actuComboBox" prefWidth="150.0" promptText="Select Departement" />
+                  <Label layoutX="14.0" layoutY="19.0" text="Departement" />
+                  <ComboBox fx:id="stageeComboBoxEd" layoutX="110.0" layoutY="50.0" prefWidth="150.0" promptText="Select Stage" />
+               </children>
+            </AnchorPane>
+            <Separator layoutX="347.0" layoutY="136.0" orientation="VERTICAL" prefHeight="239.0" prefWidth="4.0" />
+            <Button layoutX="556.0" layoutY="374.0" mnemonicParsing="false" onAction="#quit" text="Annuler" />
+            <Button layoutX="493.0" layoutY="374.0" mnemonicParsing="false" onAction="#edit" text="Editer">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
